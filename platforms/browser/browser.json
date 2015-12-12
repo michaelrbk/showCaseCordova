@@ -9,11 +9,15 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },
     "dependent_plugins": {},
     "modules": [],
     "plugin_metadata": {
-        "cordova-plugin-whitelist": "1.2.0"
+        "cordova-plugin-whitelist": "1.2.0",
+        "cordova-plugin-geolocation": "1.0.1"
     }
 }
