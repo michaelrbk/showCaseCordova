@@ -11,7 +11,13 @@ var geolocation = {
                 'Timestamp: '         + position.timestamp                + '\n');*/
 
             $("#latitude").val(position.coords.latitude);
-            alert("lat:" + position.coords.latitude);
+            $("#longitude").val(position.coords.longitude);
+            $("#altitude").val(position.coords.altitude);
+            $("#accuracy").val(position.coords.accuracy);
+            $("#altitudeAccuracy").val(position.coords.altitudeAccuracy);
+            $("#heading").val(position.coords.heading);
+            $("#speed").val(position.coords.speed);
+            $("#timestamp").val(position.timestamp);
         };
 
         function onError(error) {
