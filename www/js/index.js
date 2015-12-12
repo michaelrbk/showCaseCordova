@@ -7,7 +7,7 @@ var app = {
     },
     onDeviceReady: function() {
         $(document).on('pageshow', '#teste' ,function(){
-            alert("foi");
+            geolocation.exec();
         });
     }
 };
