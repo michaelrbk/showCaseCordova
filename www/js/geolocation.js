@@ -1,6 +1,8 @@
 document.addEventListener("deviceready", function() {
 
-    $(document).on("pageshow", "#geolocation" ,function(){
+    var updateGeolocation = function () {
+
+        $.mobile.loading("show");
 
         var onSuccess = function(position) {
 
@@ -12,15 +14,29 @@ document.addEventListener("deviceready", function() {
             $("#heading").val(position.coords.heading);
             $("#speed").val(position.coords.speed);
             $("#timestamp").val(position.timestamp);
+
+            $.mobile.loading("hide");
         };
 
         function onError(error) {
-            alert("code: "    + error.code    + '\n' +
-                "message: " + error.message + '\n');
-        }
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
+            alert("Code: "    + error.code    + "\n" +
+                "Message: " + error.message + "\n");
+
+            $.mobile.loading("hide");$.mobile.loading("hide");
+        }
+
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    };
+
+    $(document).on("pageshow", "#geolocation" ,function(){
+
+        updateGeolocation();
+    });
+
+    $(document).on("click", "#updateGeolocation", function() {
+
+        updateGeolocation();
     });
 
 }, false);
-
