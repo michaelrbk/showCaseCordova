@@ -1,5 +1,7 @@
-var geolocation = {
-    exec: function() {
+document.addEventListener("deviceready", function() {
+
+    $(document).on("pageshow", "#geolocation" ,function(){
+
         var onSuccess = function(position) {
 
             $("#latitude").val(position.coords.latitude);
@@ -17,6 +19,8 @@ var geolocation = {
                 "message: " + error.message + '\n');
         }
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
-    }
-};
+
+    });
+
+}, false);
 
