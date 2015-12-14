@@ -1,22 +1,21 @@
 document.addEventListener("deviceready", function() {
 
     $(document).on("pageshow", "#networkInformation" ,function(){
-        alert("1")
         var networkState = navigator.connection.type;
-        alert(networkState);
-        alert(Connection.UNKNOWN);
-        var states = {};
-        states[Connection.UNKNOWN]  = "Unknown connection";
-  /*      states[Connection.ETHERNET] = "Ethernet connection";
-        states[Connection.WIFI]     = "WiFi connection";
-        states[Connection.CELL_2G]  = "Cell 2G connection";
-        states[Connection.CELL_3G]  = "Cell 3G connection";
-        states[Connection.CELL_4G]  = "Cell 4G connection";
-        states[Connection.CELL]     = "Cell generic connection";
-        states[Connection.NONE]     = "No network connection";*/
 
-        alert(states);
-        alert(states[networkState]);
+        //TODO: Ver como usar as constantes da variável Connection.NONE. Variável está undefined neste escopo.
+        //TODO: Ver se precisa contornar: No Android dá unknown.
+        var states = {};
+
+        states["unknown"] = "Unknown connection";
+        states["ethernet"] = "Ethernet connection";
+        states["wifi"] = "WiFi connection";
+        states["2g"] = "Cell 2G connection";
+        states["3g"] = "Cell 3G connection";
+        states["4g"] = "Cell 4G connection";
+        states["cellular"] = "Cell generic connection";
+        states["none"] = "No network connection";
+
         $("#type").val(states[networkState]);
     });
 });
