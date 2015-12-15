@@ -31,6 +31,10 @@
                         {
                             "xml": "<feature name=\"Accelerometer\"><param name=\"android-package\" value=\"org.apache.cordova.devicemotion.AccelListener\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Contacts\"><param name=\"android-package\" value=\"org.apache.cordova.contacts.ContactManager\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -52,6 +56,18 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_CONTACTS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />",
                             "count": 1
                         }
                     ],
@@ -85,6 +101,9 @@
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
         "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "cordova-plugin-contacts": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },
@@ -177,6 +196,78 @@
             "clobbers": [
                 "navigator.accelerometer"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-contacts/www/contacts.js",
+            "id": "cordova-plugin-contacts.contacts",
+            "pluginId": "cordova-plugin-contacts",
+            "clobbers": [
+                "navigator.contacts"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-contacts/www/Contact.js",
+            "id": "cordova-plugin-contacts.Contact",
+            "pluginId": "cordova-plugin-contacts",
+            "clobbers": [
+                "Contact"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-contacts/www/ContactAddress.js",
+            "id": "cordova-plugin-contacts.ContactAddress",
+            "pluginId": "cordova-plugin-contacts",
+            "clobbers": [
+                "ContactAddress"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-contacts/www/ContactError.js",
+            "id": "cordova-plugin-contacts.ContactError",
+            "pluginId": "cordova-plugin-contacts",
+            "clobbers": [
+                "ContactError"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-contacts/www/ContactField.js",
+            "id": "cordova-plugin-contacts.ContactField",
+            "pluginId": "cordova-plugin-contacts",
+            "clobbers": [
+                "ContactField"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-contacts/www/ContactFindOptions.js",
+            "id": "cordova-plugin-contacts.ContactFindOptions",
+            "pluginId": "cordova-plugin-contacts",
+            "clobbers": [
+                "ContactFindOptions"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-contacts/www/ContactName.js",
+            "id": "cordova-plugin-contacts.ContactName",
+            "pluginId": "cordova-plugin-contacts",
+            "clobbers": [
+                "ContactName"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-contacts/www/ContactOrganization.js",
+            "id": "cordova-plugin-contacts.ContactOrganization",
+            "pluginId": "cordova-plugin-contacts",
+            "clobbers": [
+                "ContactOrganization"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-contacts/www/ContactFieldType.js",
+            "id": "cordova-plugin-contacts.ContactFieldType",
+            "pluginId": "cordova-plugin-contacts",
+            "merges": [
+                ""
+            ]
         }
     ],
     "plugin_metadata": {
@@ -186,6 +277,7 @@
         "cordova-plugin-device": "1.1.0",
         "cordova-plugin-network-information": "1.1.0",
         "cordova-plugin-camera": "1.2.0",
-        "cordova-plugin-device-motion": "1.2.0"
+        "cordova-plugin-device-motion": "1.2.0",
+        "cordova-plugin-contacts": "1.1.0"
     }
 }
