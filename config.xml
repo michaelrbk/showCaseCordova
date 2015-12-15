@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets">
-    <name>HelloCordova</name>
+    <name>ShowCase Cordova</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
@@ -11,6 +11,7 @@
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <plugin name="Accelerometer" value="org.apache.cordova.AccelListener"/>
     <access origin="*" />
+    <allow-navigation href="*"/>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
