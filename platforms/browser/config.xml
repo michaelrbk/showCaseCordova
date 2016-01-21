@@ -6,7 +6,7 @@
     <feature name="Camera">
         <param name="browser-package" value="Camera" />
     </feature>
-    <name>HelloCordova</name>
+    <name>ShowCase Cordova</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
@@ -15,6 +15,7 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />

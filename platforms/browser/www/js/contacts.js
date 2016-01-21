@@ -1,21 +1,27 @@
-document.addEventListener("deviceready", function() {
+document.addEventListener("deviceready", function () {
+    $(document).on("pageshow", "#contacts", function () {
 
-    function onSuccess(contacts) {
-        alert('Found ' + contacts.length + ' contacts.');
-    };
+        function onSuccess(contacts) {
+            console.log("gotContacts, number of results " + contacts.length);
+            for (var i = 0; i < contacts.length; i++) {
 
-    function onError(contactError) {
-        alert('onError!');
-    };
+                $('#contacts-list').append('<li>' + contacts[i].displayName + '</li>').listview('refresh');
+            }
 
-    $(document).on("pageshow", "#device" ,function() {
-        alert("1");
+        };
+
+        function onError(contactError) {
+            alert('onError!');
+        };
+
+
         var options = new ContactFindOptions();
         options.filter = "Michael";
         options.multiple = true;
-        options.desiredFields = [navigator.contacts.fieldType.id];
+        //options.desiredFields = [navigator.contacts.fieldType.id];
         options.hasPhoneNumber = true;
-        var fields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name];
+        var fields = ["displayName", "name",];
         navigator.contacts.find(fields, onSuccess, onError, options);
+
     });
 }, false);
