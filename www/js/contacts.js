@@ -10,13 +10,18 @@ document.addEventListener("deviceready", function () {
                 $("#contacts-list").append("<li>" + contacts[i].displayName + "</li>").listview("refresh");
             }
         }
+
+        $.mobile.loading("hide");
     };
 
     function onError(contactError) {
+        $.mobile.loading("hide");
         alert("onError!");
     };
 
     function searchForContact() {
+        $.mobile.loading("show");
+
         var options = new ContactFindOptions();
         options.filter = $("#searchTerm").val();
         options.multiple = true;
