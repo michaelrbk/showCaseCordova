@@ -7,3 +7,8 @@
     width: 40%;
     float: right;
 }
+
+input[type="text"] {
+    background-color: white;
+    color: black;
+}

@@ -1,27 +1,33 @@
 document.addEventListener("deviceready", function () {
-    $(document).on("pageshow", "#contacts", function () {
 
-        function onSuccess(contacts) {
-            console.log("gotContacts, number of results " + contacts.length);
+    function onSuccess(contacts) {
+        $("#contacts-list").empty();
+
+        if (contacts.length == 0) {
+            $("#contacts-list").append("<li>No results</li>").listview("refresh");
+        } else {
             for (var i = 0; i < contacts.length; i++) {
-
-                $('#contacts-list').append('<li>' + contacts[i].displayName + '</li>').listview('refresh');
+                $("#contacts-list").append("<li>" + contacts[i].displayName + "</li>").listview("refresh");
             }
+        }
+    };
 
-        };
+    function onError(contactError) {
+        alert("onError!");
+    };
 
-        function onError(contactError) {
-            alert('onError!');
-        };
-
-
+    function searchForContact() {
         var options = new ContactFindOptions();
-        options.filter = "Michael";
+        options.filter = $("#searchTerm").val();
         options.multiple = true;
         //options.desiredFields = [navigator.contacts.fieldType.id];
         options.hasPhoneNumber = true;
         var fields = ["displayName", "name",];
         navigator.contacts.find(fields, onSuccess, onError, options);
+    }
 
-    });
+    $(document).on("change", "#searchTerm", searchForContact);
+
+    $(document).on("click", "#searchButton", searchForContact);
+
 }, false);
