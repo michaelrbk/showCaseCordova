@@ -238,6 +238,14 @@ module.exports = [
             "cordova.plugins.notification.local.core",
             "plugin.notification.local.core"
         ]
+    },
+    {
+        "file": "plugins/com.ionic.keyboard/www/keyboard.js",
+        "id": "com.ionic.keyboard.keyboard",
+        "pluginId": "com.ionic.keyboard",
+        "clobbers": [
+            "cordova.plugins.Keyboard"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -254,7 +262,8 @@ module.exports.metadata =
     "cordova-plugin-inappbrowser": "1.2.0",
     "cordova-plugin-dialogs": "1.2.0",
     "cordova-plugin-app-event": "1.1.0",
-    "de.appplant.cordova.plugin.local-notification": "0.8.4"
+    "de.appplant.cordova.plugin.local-notification": "0.8.4",
+    "com.ionic.keyboard": "1.0.4"
 }
 // BOTTOM OF METADATA
 });

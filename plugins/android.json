@@ -39,6 +39,9 @@
         },
         "de.appplant.cordova.plugin.local-notification": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "com.ionic.keyboard": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },
     "dependent_plugins": {
