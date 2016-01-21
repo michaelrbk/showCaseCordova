@@ -23,7 +23,7 @@ document.addEventListener("deviceready", function() {
             alert("Code: "    + error.code    + "\n" +
                 "Message: " + error.message + "\n");
 
-            $.mobile.loading("hide");$.mobile.loading("hide");
+            $.mobile.loading("hide");
         }
 
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
