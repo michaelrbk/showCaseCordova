@@ -14,15 +14,17 @@
     <script type="text/javascript" src="js/keyboard.js"></script>
 </head>
 <body>
-<div data-role="page" data-theme="b">
+<div data-role="page" id="keyboardPage" data-theme="b">
     <div data-role="header" data-position="fixed">
-        <a id="backButtonKeyboard" href="#" class="ui-btn-left" data-rel="back"><</a>
+        <a href="#" class="ui-btn-left" data-rel="back"><</a>
         <h1>Keyboard</h1>
     </div>
 
     <div role="main" class="ui-content">
         <input id="showKeyboard" type="button" value="Show Keyboard" />
         <input id="hideKeyboard" type="button" value="Hide Keyboard" />
+        <input id="addEventListener" type="button" value="Add Event Listener" />
+        <input id="removeEventListener" type="button" value="Remove Event Listener" />
     </div>
 
     <div data-role="footer" data-position="fixed">

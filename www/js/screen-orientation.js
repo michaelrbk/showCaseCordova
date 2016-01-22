@@ -17,11 +17,11 @@ document.addEventListener("deviceready", function() {
         alert("Orientation changed to " + screen.orientation.type);
     }
 
-    $(document).on("click", "#addEventListener", function() {
+    $(document).on("click", "#screenOrientationPage #addEventListener", function() {
         window.addEventListener("orientationchange", alertScreenOrientation);
     });
 
-    $(document).on("click", "#removeEventListener", function() {
+    $(document).on("click", "#screenOrientationPage  #removeEventListener", function() {
         window.removeEventListener("orientationchange", alertScreenOrientation);
     });
 
