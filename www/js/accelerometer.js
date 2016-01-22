@@ -1,6 +1,6 @@
 document.addEventListener("deviceready", function () {
 
-    $(document).on("pageshow", "#device-motion", function () {
+    $(document).on("pageshow", "#accelerometer", function () {
         var watchID = null;
 
         var options = {frequency: 500};  // Update every 0,5 seconds
@@ -15,7 +15,7 @@ document.addEventListener("deviceready", function () {
         }
 
         function onError() {
-            alert('onError!');
+            alert("onError!");
         }
     });
 
