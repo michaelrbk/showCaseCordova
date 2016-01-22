@@ -1,22 +1,40 @@
 document.addEventListener("deviceready", function () {
 
-    $(document).on("pageshow", "#accelerometerPage", function () {
-        var watchID = null;
+    function updateAcceleration(acceleration) {
+        $("#x").val(acceleration.x);
+        $("#y").val(acceleration.y);
+        $("#z").val(acceleration.z);
+        $("#accelerometerTimestamp").val(acceleration.timestamp);
+    }
 
-        var options = {frequency: 500};  // Update every 0,5 seconds
-        watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    function onError() {
+        alert("onError!");
+    }
 
+    $(document).on("click", "#getCurrentAcceleration", function() {
+        navigator.accelerometer.getCurrentAcceleration(updateAcceleration, onError);
+    });
 
-        function onSuccess(acceleration) {
+    var watchID;
 
-            $("#x").val(acceleration.x);
-            $("#y").val(acceleration.y);
-            $("#z").val(acceleration.z);
-        }
+    $(document).on("click", "#watchAcceleration", function() {
+        $("#getCurrentAcceleration").button("disable");
+        $("#accelerometerUpdateFrequency").slider("disable");
+        $("#watchAcceleration").button("disable");
+        $("#stopWatchingAcceleration").button("enable");
 
-        function onError() {
-            alert("onError!");
-        }
+        var updateFrequency = parseInt($("#accelerometerUpdateFrequency").val());
+        var options = {frequency: updateFrequency};
+        watchID = navigator.accelerometer.watchAcceleration(updateAcceleration, onError, options);
+    });
+
+    $(document).on("click", "#stopWatchingAcceleration", function() {
+        $("#getCurrentAcceleration").button("enable");
+        $("#accelerometerUpdateFrequency").slider("enable");
+        $("#watchAcceleration").button("enable");
+        $("#stopWatchingAcceleration").button("disable");
+
+        navigator.accelerometer.clearWatch(watchID);
     });
 
 }, false);
