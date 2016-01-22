@@ -1,6 +1,6 @@
 document.addEventListener("deviceready", function() {
 
-    $(document).on("pageshow", "#camera", function () {
+    $(document).on("pageshow", "#cameraPage", function () {
 
         $(document).on("click", "#getPhoto", function () {
 

@@ -59,6 +59,10 @@
                         {
                             "xml": "<feature name=\"LocalNotification\"><param name=\"android-package\" value=\"de.appplant.cordova.plugin.localnotification.LocalNotification\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Insomnia\"><param name=\"android-package\" value=\"nl.xservices.plugins.Insomnia\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -187,6 +191,9 @@
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
         "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "nl.x-services.plugins.insomnia": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },
@@ -451,6 +458,14 @@
                 "cordova.plugins.notification.local.core",
                 "plugin.notification.local.core"
             ]
+        },
+        {
+            "file": "plugins/nl.x-services.plugins.insomnia/www/Insomnia.js",
+            "id": "nl.x-services.plugins.insomnia.Insomnia",
+            "pluginId": "nl.x-services.plugins.insomnia",
+            "clobbers": [
+                "window.plugins.insomnia"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -468,6 +483,7 @@
         "cordova-plugin-screen-orientation": "1.4.0",
         "cordova-plugin-vibration": "2.0.0",
         "cordova-plugin-whitelist": "1.2.0",
-        "de.appplant.cordova.plugin.local-notification": "0.8.4"
+        "de.appplant.cordova.plugin.local-notification": "0.8.4",
+        "nl.x-services.plugins.insomnia": "4.0.1"
     }
 }

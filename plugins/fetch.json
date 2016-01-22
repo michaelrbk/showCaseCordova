@@ -119,5 +119,13 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "nl.x-services.plugins.insomnia": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-insomnia"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

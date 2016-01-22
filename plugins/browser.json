@@ -48,6 +48,9 @@
         },
         "cordova-plugin-screen-orientation": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "nl.x-services.plugins.insomnia": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },
     "dependent_plugins": {
