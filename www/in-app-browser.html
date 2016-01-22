@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cordova Showcase</title>
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <link rel="stylesheet" href="css/showcase.css" />
+    <script type="text/javascript"  src="js/common.js"></script>
+    <script type="text/javascript" src="js/in-app-browser.js"></script>
+</head>
+<body>
+<div data-role="page" id="inAppBrowser" data-theme="b">
+    <div data-role="header" data-position="fixed">
+        <a href="#" class="ui-btn-left" data-rel="back"><</a>
+        <h1>In App Browser</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+        <label for="url">URL:</label>
+        <input id="url" type="text" value="https://github.com/michaelrbk/showCaseCordova"/>
+        <input id="openBrowser" type="button" value="Open Browser" />
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <a class="showHTMLButton" href="https://github.com/michaelrbk/showCaseCordova/blob/master/www/in-app-browser.html">HTML</a>
+        <a class="showJSButton" href="https://github.com/michaelrbk/showCaseCordova/blob/master/www/js/in-app-browser.js">JS</a>
+    </div>
+</div>
+</body>
+</html>
