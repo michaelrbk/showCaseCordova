@@ -1,6 +1,6 @@
 document.addEventListener("deviceready", function() {
 
-    $(document).on("pageshow", "#device" ,function(){
+    $(document).on("pageshow", "#devicePage" ,function(){
 
         $("#cordova").val(device.cordova);
         $("#model").val(device.model);
