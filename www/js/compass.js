@@ -22,13 +22,20 @@ document.addEventListener("deviceready", function () {
         $("#getCurrentHeading").button("disable");
         $("#watchHeading").button("disable");
         $("#stopWatchingHeading").button("enable");
-        watchId = navigator.compass.watchHeading(compassSuccess, compassError);
+
+        var updateFrequency = parseInt($("#compassUpdateFrequency").val());
+        var options =
+        {
+            frequency: updateFrequency
+        }
+        watchId = navigator.compass.watchHeading(compassSuccess, compassError, options);
     });
 
     $(document).on("click", "#stopWatchingHeading", function() {
         $("#getCurrentHeading").button("enable");
         $("#watchHeading").button("enable");
         $("#stopWatchingHeading").button("disable");
+
         navigator.compass.clearWatch(watchId);
     });
 

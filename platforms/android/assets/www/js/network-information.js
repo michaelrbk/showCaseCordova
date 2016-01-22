@@ -1,6 +1,6 @@
 document.addEventListener("deviceready", function() {
 
-    $(document).on("pageshow", "#networkInformation" ,function(){
+    $(document).on("pageshow", "#networkInformationPage" ,function(){
         var networkState = navigator.connection.type;
 
         //TODO: Ver como usar as constantes da variável Connection.NONE. Variável está undefined neste escopo.

@@ -29,7 +29,7 @@ document.addEventListener("deviceready", function() {
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
     };
 
-    $(document).on("pageshow", "#geolocation" ,function(){
+    $(document).on("pageshow", "#geolocationPage" ,function(){
 
         updateGeolocation();
     });
