@@ -240,14 +240,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/com.ionic.keyboard/www/keyboard.js",
-        "id": "com.ionic.keyboard.keyboard",
-        "pluginId": "com.ionic.keyboard",
-        "clobbers": [
-            "cordova.plugins.Keyboard"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-device-orientation/www/CompassError.js",
         "id": "cordova-plugin-device-orientation.CompassError",
         "pluginId": "cordova-plugin-device-orientation",
@@ -292,6 +284,14 @@ module.exports = [
         "clobbers": [
             "window.plugins.insomnia"
         ]
+    },
+    {
+        "file": "plugins/com.ionic.keyboard/www/keyboard.js",
+        "id": "com.ionic.keyboard.keyboard",
+        "pluginId": "com.ionic.keyboard",
+        "clobbers": [
+            "cordova.plugins.Keyboard"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -309,10 +309,10 @@ module.exports.metadata =
     "cordova-plugin-dialogs": "1.2.0",
     "cordova-plugin-app-event": "1.1.0",
     "de.appplant.cordova.plugin.local-notification": "0.8.4",
-    "com.ionic.keyboard": "1.0.4",
     "cordova-plugin-device-orientation": "1.0.2",
     "cordova-plugin-screen-orientation": "1.4.0",
-    "nl.x-services.plugins.insomnia": "4.0.1"
+    "nl.x-services.plugins.insomnia": "4.0.1",
+    "com.ionic.keyboard": "1.0.4"
 }
 // BOTTOM OF METADATA
 });

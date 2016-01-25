@@ -9,10 +9,6 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"com.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
                             "count": 1
                         },
@@ -62,6 +58,10 @@
                         },
                         {
                             "xml": "<feature name=\"Insomnia\"><param name=\"android-package\" value=\"nl.xservices.plugins.Insomnia\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"com.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -148,9 +148,6 @@
         }
     },
     "installed_plugins": {
-        "com.ionic.keyboard": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
-        },
         "cordova-plugin-app-event": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
@@ -195,18 +192,13 @@
         },
         "nl.x-services.plugins.insomnia": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "com.ionic.keyboard": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },
     "dependent_plugins": {},
     "modules": [
-        {
-            "file": "plugins/com.ionic.keyboard/www/keyboard.js",
-            "id": "com.ionic.keyboard.keyboard",
-            "pluginId": "com.ionic.keyboard",
-            "clobbers": [
-                "cordova.plugins.Keyboard"
-            ]
-        },
         {
             "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
             "id": "cordova-plugin-camera.Camera",
@@ -466,10 +458,17 @@
             "clobbers": [
                 "window.plugins.insomnia"
             ]
+        },
+        {
+            "file": "plugins/com.ionic.keyboard/www/keyboard.js",
+            "id": "com.ionic.keyboard.keyboard",
+            "pluginId": "com.ionic.keyboard",
+            "clobbers": [
+                "cordova.plugins.Keyboard"
+            ]
         }
     ],
     "plugin_metadata": {
-        "com.ionic.keyboard": "1.0.4",
         "cordova-plugin-app-event": "1.1.0",
         "cordova-plugin-camera": "1.2.0",
         "cordova-plugin-contacts": "1.1.0",
@@ -484,6 +483,7 @@
         "cordova-plugin-vibration": "2.0.0",
         "cordova-plugin-whitelist": "1.2.0",
         "de.appplant.cordova.plugin.local-notification": "0.8.4",
-        "nl.x-services.plugins.insomnia": "4.0.1"
+        "nl.x-services.plugins.insomnia": "4.0.1",
+        "com.ionic.keyboard": "1.0.4"
     }
 }
