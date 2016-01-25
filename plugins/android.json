@@ -7,9 +7,6 @@
         "files": {}
     },
     "installed_plugins": {
-        "com.ionic.keyboard": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
-        },
         "cordova-plugin-app-event": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
