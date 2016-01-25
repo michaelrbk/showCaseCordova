@@ -96,14 +96,6 @@
         "is_top_level": false,
         "variables": {}
     },
-    "com.ionic.keyboard": {
-        "source": {
-            "type": "registry",
-            "id": "com.ionic.keyboard"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-device-orientation": {
         "source": {
             "type": "registry",
@@ -124,6 +116,14 @@
         "source": {
             "type": "registry",
             "id": "cordova-plugin-insomnia"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.ionic.keyboard": {
+        "source": {
+            "type": "registry",
+            "id": "com.ionic.keyboard"
         },
         "is_top_level": true,
         "variables": {}

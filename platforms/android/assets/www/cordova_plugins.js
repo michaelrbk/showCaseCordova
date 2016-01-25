@@ -1,14 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/com.ionic.keyboard/www/keyboard.js",
-        "id": "com.ionic.keyboard.keyboard",
-        "pluginId": "com.ionic.keyboard",
-        "clobbers": [
-            "cordova.plugins.Keyboard"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
         "id": "cordova-plugin-camera.Camera",
         "pluginId": "cordova-plugin-camera",
@@ -267,12 +259,19 @@ module.exports = [
         "clobbers": [
             "window.plugins.insomnia"
         ]
+    },
+    {
+        "file": "plugins/com.ionic.keyboard/www/keyboard.js",
+        "id": "com.ionic.keyboard.keyboard",
+        "pluginId": "com.ionic.keyboard",
+        "clobbers": [
+            "cordova.plugins.Keyboard"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "com.ionic.keyboard": "1.0.4",
     "cordova-plugin-app-event": "1.1.0",
     "cordova-plugin-camera": "1.2.0",
     "cordova-plugin-contacts": "1.1.0",
@@ -287,7 +286,8 @@ module.exports.metadata =
     "cordova-plugin-vibration": "2.0.0",
     "cordova-plugin-whitelist": "1.2.0",
     "de.appplant.cordova.plugin.local-notification": "0.8.4",
-    "nl.x-services.plugins.insomnia": "4.0.1"
+    "nl.x-services.plugins.insomnia": "4.0.1",
+    "com.ionic.keyboard": "1.0.4"
 }
 // BOTTOM OF METADATA
 });
